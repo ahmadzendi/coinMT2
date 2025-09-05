@@ -71,7 +71,7 @@ async def maintenance_loop():
                     await send_telegram(msg)
                     mt_now[symbol] = {"status": 1, "since": now}
                 elif is_mt == 0 and prev_status == 1:
-                    msg = f"✅ <b>{symbol.upper()}</b> keluar dari maintenance pada {now}"
+                    msg = f"✅ <b>{symbol.upper()}</b> keluar maintenance pada {now}"
                     print(msg)
                     await send_telegram(msg)
                 elif is_mt == 1 and prev_status == 1:
