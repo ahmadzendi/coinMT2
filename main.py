@@ -17,7 +17,7 @@ WIB = pytz.timezone('Asia/Jakarta')
 
 def get_pairs():
     url = "https://indodax.com/api/pairs"
-    r = requests.get(url, timeout=10)
+    r = requests.get(url, timeout=5)
     r.raise_for_status()
     return r.json()
 
